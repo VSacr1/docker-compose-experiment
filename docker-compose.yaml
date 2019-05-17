@@ -1,0 +1,12 @@
+version: '3.7'
+services: 
+  app:
+    image: app:${APP_VERSION} 
+    build: .
+    ports: 
+    - target: 8080
+      protocol: tcp
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+
